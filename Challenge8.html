@@ -4,29 +4,65 @@
 	<title>Challenge 8</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
 
 	<style>
 	h1 {
 		text-align: center;
 	}
+
+	p {
+		margin: 5% 30%;
+		text-align: center;
+	}
 	</style>
 </head>
 <body>
+<nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
 
-	<ul class="nav nav-pills">
-		<li><i class="fa fa-home"></i></li>
-		<li role="presentation" class="dropdown">
-			<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-					Dropdown <span class="caret"></span>
-				</a>
-				<ul class="dropdown-menu">
-					...
+		<div class="container">
+	
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#custom-collapse">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#"><i class="fa fa-home fa-3"></i></a>
+			</div>
+			
+			<div class="collapse navbar-collapse" id="custom-collapse">
+				<ul class="nav navbar-nav nav-tabs" role="tablist">
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Community</a>
+						<ul class="dropdown-menu">
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Community</a>
+								<ul class="dropdown-menu">
+									<li><a href="#">Recent Activity</a></li>
+									<li><a href="#">Member Forum</a></li>
+									<li><a href="#">Member List</a></li>
+									<li><a href="#">Member Groups</a></li>
+								</ul>
+							</li>
+						</ul>
+					<li role="presentation"><a href="#" role="tab" data-toggle="tab">Pet Help</a></li>
+					<li role="presentation"><a href="#">Pets for Sale</a></li>
+					<li role="presentation"><a href="#">Pet Services</a></li>
 				</ul>
-			</li>
-		</ul>
+			</div>
 	<h1><a href="https://codinghouse.co/challenges/8">Challenge #8 | Navbar Mockup</a></h1>
 	<p>Convert this mockup into HTML using Bootstrap nav components with dropdowns</p>
 
 <p>For the first tab with the home icon, use Font Awesome. Make sure you use both Bootstrap and Font Awesome through a CDN (don’t download these libraries)</p>
+
+<script>
+$('#myTabs').click(function (e) {
+  e.preventDefault()
+  $(this).tab('show')
+})
+</script>
 </body>
 </html>
