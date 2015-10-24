@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="index.css">
+</head>
+<body>
+  <div class="header">
+    <h1>Challenge 5</h1>
+  </div>
+  <div class="body">
+    <p>Write a JavaScript function that would swap the case of each character in the string you pass to it as an argument.</p>
+
+    <p>Test Case:</p>
+
+    <p>swapCase("Life is 10% what happens to you, and 90% of how you REACT to it");</p>
+    <p>Would return:</p>
+
+    <p>"lIFE IS 10% WHAT HAPPENS TO YOU, AND 90% OF HOW YOU react TO IT"</p>
+    <p>Back to <a href="index.html">main page</a></p>
+  </div>
+
+  <pre style="margin:0em; overflow:auto; background-color:#ffffff;"><code style="font-family:Consolas,&quot;Courier New&quot;,Courier,Monospace; font-size:10pt; color:#000000;">function swapCase(str) {
+      <span style="color:#008000;">// var strArray = str.split('');</span>
+      <span style="color:#0000ff;">var</span> newArray = <span style="color:#a31515;">''</span>;
+     <span style="color:#008000;">// for (var i = 0; i &lt; strArray.length; i++) {</span>
+      <span style="color:#0000ff;">for</span> (<span style="color:#0000ff;">var</span> i = 0; i &lt; str.length; i++) {
+        <span style="color:#0000ff;">if</span> (str[i] === str[i].toUpperCase()) {
+            newArray += str[i].toLowerCase();
+            } <span style="color:#0000ff;">else</span> {
+            newArray += str[i].toUpperCase();
+            }
+      }
+    console.log(newArray);
+    <span style="color:#008000;">//return newArray;</span>
+  }
+
+  swapCase(<span style="color:#a31515;">"hEllO wOrld"</span>);</code></pre>
+
+</body>
+</html>
