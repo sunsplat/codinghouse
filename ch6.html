@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+body {
+    background: #000;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.header {
+	text-align: center;
+}
+
+.body {
+	margin: 10% 30%;
+}
+
+.footer {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	padding: 0;
+	margin: 0;
+}
+
+.button {
+	background-color: red;
+	padding: 1rem;
+	text-align: center;
+}
+
+.changeBackground {
+	background-color: #FF8F00 !important;
+	color: #000000 !important;
+}
+
+a {
+	color: yellow;
+}
+
+.changeLink {
+	color: #FFF;
+}
+
+</style>
+
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<!-- <script src="http://code.jquery.com/ui/1.10.0/jquery-ui.js"></script> -->
+</head>
+<body>
+		<div class="header">
+				<h1>Welcome to Challenge #6: jQuery Basics</h1>
+		</div>
+
+
+		<div class="body">  
+				<p>Learn jQuery basics for working with the DOM (selecting, manipulating, events)</p>
+
+				<p>Implement a light/dark theme feature on your website using jQuery. Put links in the footer that change the background and text color when you click them. (dark on light vs light on dark)</p>
+
+				<p>Resources:</p>
+				<p>
+				CodeSchool <a href="http://www.tryjquery.com" target="_blank">Try jQuery</a><br>
+				<a href="http://learn.jquery.com">Learn jQuery</a></p>     
+			
+		</div>
+
+
+		<div class="footer">
+			<div class="button" id="button">Click Here to Change Theme</div>
+		</div>
+
+
+<script>
+	$(window).load(function() {
+
+   $('#button').click(function() {
+   	$('body').toggleClass("changeBackground");
+   	$('a').toggleClass("changeLink");
+   });
+   });
+
+
+ /* $(document).ready(function(){
+ 		$('#button').click(function() {
+      var r=0;
+      var g=0;    
+      var b=0;
+
+      for(r=0;r<255;r++) {
+          for(g=0;g<255;g++) {
+              for(b=0;b<255;b++) {
+                  $("body").css({"background-color","rgb(r,g,b)", "color": "rgb(r,g,b)"});
+              }
+          }
+      }
+    });
+  });
+*/
+</script>
+</body>
+</html>
